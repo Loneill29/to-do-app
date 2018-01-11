@@ -38,9 +38,15 @@ function onReady() {
         deleteButton.innerText = "Delete";
         newLi.appendChild(deleteButton);
 
+<<<<<<< Updated upstream
         deleteButton.addEventListener('click', () => {
           event.preventDefault();
           toDoList.removeChild(newLi);
+=======
+        deleteButton.addEventListener('click', (event) => {
+          event.preventDefault();
+          //toDoList.removeChild(newLi);
+>>>>>>> Stashed changes
           deleteToDo(toDo.id);
           renderTheUI();
         });
@@ -49,10 +55,15 @@ function onReady() {
   }
 
   function deleteToDo(id) {
+<<<<<<< Updated upstream
     const filtered = toDos.filter(newLi => newLi.id !== id);
     if (toDos.filter()) {
       return true;
     } else return false;
+=======
+    toDos = toDos.filter(newLi => newLi.id !== id);
+
+>>>>>>> Stashed changes
   }
 
   addToDoForm.addEventListener('submit', event => {
